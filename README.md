@@ -1,5 +1,3 @@
-# clintval
-
 I lead technical teams in biotech and write software for new genomics technologies. At Fulcrum Genomics you'll find me building tools and leading others in the fields of oncology, cell & gene editing, and precision medicine all while ensuring we deliver high-quality services to our clients and partners.
 
 ![Cover](.github/img/cover.jpg)
