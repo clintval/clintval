@@ -26,16 +26,16 @@ Score capture baits against a reference:
         --per-bait per-bait.tsv
 ```
 
-## krak
+## bedspec
 
-Bridge Kraken classifications into a BAM and filter by taxon:
+Build typed BED records and query intervals for overlap:
 
-```bash
-❯ krak annotate \
-      -i input.bam \
-      -d /kraken-db \
-      -a <(krak prep input.bam | kraken2 --db /kraken-db --output - -) \
-  | krak filter -t 9606 -o output.bam
+```python
+from bedspec import Bed3, Bed4
+from bedspec.overlap import OverlapDetector
+
+detector = OverlapDetector[Bed3]([Bed3("chr1", start=1, end=9)])
+detector.overlaps(Bed4("chr1", start=2, end=3, name="hi-mom"))  # True
 ```
 
 ### Elsewhere
