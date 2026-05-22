@@ -30,12 +30,13 @@ Score capture baits against a reference:
 
 Build typed BED records and query intervals for overlap:
 
-```python
-from bedspec import Bed3, Bed4
-from bedspec.overlap import OverlapDetector
+```pycon
+>>> from bedspec import Bed3, Bed4
+>>> from bedspec.overlap import OverlapDetector
 
-detector = OverlapDetector[Bed3]([Bed3("chr1", start=1, end=9)])
-detector.overlaps(Bed4("chr1", start=2, end=3, name="hi-mom"))  # True
+>>> detector = OverlapDetector[Bed3]([Bed3("chr1", start=1, end=9)])
+>>> detector.overlaps(Bed4("chr1", start=2, end=3, name="hi-mom"))
+True
 ```
 
 ### Elsewhere
