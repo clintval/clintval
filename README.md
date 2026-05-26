@@ -18,12 +18,11 @@ I lead technical teams in biotech and write software for new genomics technologi
 Score capture baits against a reference:
 
 ```bash
-❯ pixi exec --channel bioconda --channel conda-forge \
-    chum score \
-        --baits baits.fa \
-        --targets targets.bed \
-        --reference hg38.fa \
-        --per-bait per-bait.tsv
+❯ chum score \
+    --baits baits.fa \
+    --targets targets.bed \
+    --reference hg38.fa \
+    --per-bait per-bait.tsv
 ```
 
 ## krak
@@ -43,11 +42,10 @@ Bridge Kraken classifications into a BAM and filter by taxon:
 Disambiguate templates aligned to human and mouse references:
 
 ```bash
-❯ pixi exec --channel bioconda --channel conda-forge \
-    neodisambiguate \
-        --input dna00001.aligned-to-human.bam dna00001.aligned-to-mouse.bam \
-        --output out/dna00001 \
-        --names hg38 mm10
+❯ neodisambiguate \
+    --input dna00001.aligned-to-human.bam dna00001.aligned-to-mouse.bam \
+    --output out/dna00001 \
+    --names hg38 mm10
 ```
 
 ### Elsewhere
