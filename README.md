@@ -19,9 +19,9 @@ Disambiguate templates aligned to human and mouse references:
 
 ```bash
 ❯ neodisambiguate \
-      -i dna00001.aligned-to-human.bam dna00001.aligned-to-mouse.bam \
-      -o out/dna00001 \
-      -n hg38 mm10
+      --input dna00001.aligned-to-human.bam dna00001.aligned-to-mouse.bam \
+      --output out/dna00001 \
+      --names hg38 mm10
 ```
 
 ## chum
@@ -29,7 +29,7 @@ Disambiguate templates aligned to human and mouse references:
 Score capture baits against a reference:
 
 ```bash
-❯ pixi exec -c bioconda -c conda-forge \
+❯ pixi exec --channel bioconda --channel conda-forge \
     chum score \
         --baits baits.fa \
         --targets targets.bed \
