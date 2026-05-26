@@ -13,6 +13,17 @@ I lead technical teams in biotech and write software for new genomics technologi
 | [bedspec](https://github.com/clintval/bedspec) | [![Language](https://img.shields.io/badge/language-python-blue.svg)](https://www.python.org/) | An HTS-specs compliant BED toolkit. |
 | [typeline](https://github.com/clintval/typeline) | [![Language](https://img.shields.io/badge/language-python-blue.svg)](https://www.python.org/) | Dataclasses to delimited text, round-trip with types. |
 
+## neodisambiguate
+
+Disambiguate templates aligned to human and mouse references:
+
+```bash
+❯ neodisambiguate \
+      -i dna00001.aligned-to-human.bam dna00001.aligned-to-mouse.bam \
+      -o out/dna00001 \
+      -n hg38 mm10
+```
+
 ## chum
 
 Score capture baits against a reference:
@@ -24,19 +35,6 @@ Score capture baits against a reference:
         --targets targets.bed \
         --reference hg38.fa \
         --per-bait per-bait.tsv
-```
-
-## bedspec
-
-Build typed BED records and query intervals for overlap:
-
-```pycon
->>> from bedspec import Bed3, Bed4
->>> from bedspec.overlap import OverlapDetector
-
->>> detector = OverlapDetector[Bed3]([Bed3("chr1", start=1, end=9)])
->>> detector.overlaps(Bed4("chr1", start=2, end=3, name="hi-mom"))
-True
 ```
 
 ### Elsewhere
