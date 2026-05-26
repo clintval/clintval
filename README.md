@@ -18,10 +18,11 @@ I lead technical teams in biotech and write software for new genomics technologi
 Disambiguate templates aligned to human and mouse references:
 
 ```bash
-❯ neodisambiguate \
-      --input dna00001.aligned-to-human.bam dna00001.aligned-to-mouse.bam \
-      --output out/dna00001 \
-      --names hg38 mm10
+❯ pixi exec --channel bioconda --channel conda-forge \
+    neodisambiguate \
+        --input dna00001.aligned-to-human.bam dna00001.aligned-to-mouse.bam \
+        --output out/dna00001 \
+        --names hg38 mm10
 ```
 
 ## chum
