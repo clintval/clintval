@@ -10,6 +10,12 @@ I lead technical teams in biotech and write software for new genomics technologi
 </thead>
 <tbody>
 <tr>
+<td><a href="https://github.com/clintval/unmux">unmux</a></td>
+<td><a href="https://www.rust-lang.org/"><img alt="Language" src="https://img.shields.io/badge/language-rust-dea588.svg"></a></td>
+<td><a href="http://bioconda.github.io/recipes/unmux/README.html"><img alt="Install with bioconda" src="https://img.shields.io/badge/Install%20with-bioconda-brightgreen.svg"></a></td>
+<td>Parse and demultiplex records, splitcode-style.</td>
+</tr>
+<tr>
 <td><a href="https://github.com/clintval/chum">chum</a></td>
 <td><a href="https://www.rust-lang.org/"><img alt="Language" src="https://img.shields.io/badge/language-rust-dea588.svg"></a></td>
 <td><a href="http://bioconda.github.io/recipes/chum/README.html"><img alt="Install with bioconda" src="https://img.shields.io/badge/Install%20with-bioconda-brightgreen.svg"></a></td>
@@ -47,6 +53,24 @@ I lead technical teams in biotech and write software for new genomics technologi
 </tr>
 </tbody>
 </table>
+
+## unmux
+
+Demultiplex a dual-index paired-end run against a sample sheet, routing each read pair by its i7+i5 barcode concatenation:
+
+```bash
+❯ unmux "R1.fastq.gz" "I1.fastq.gz" "I2.fastq.gz" "R2.fastq.gz" \
+  --extract "i7=1:0:8" \
+  --extract "i5=2:0:8" \
+  --extract "r1=0:0:end" \
+  --extract "r2=3:0:end" \
+  --group "samples=metadata.tsv" \
+  --group "samples::match=i7+i5" \
+  --template "r1" \
+  --template "r2" \
+  --sample-from-group "samples" \
+  --out "demux/%sample.R%ordinal.fq"
+```
 
 ## chum
 
