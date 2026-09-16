@@ -60,16 +60,17 @@ Demultiplex a dual-index paired-end run against a sample sheet, routing each rea
 
 ```bash
 ❯ unmux "R1.fastq.gz" "I1.fastq.gz" "I2.fastq.gz" "R2.fastq.gz" \
-  --extract "i7=1:0:8" \
-  --extract "i5=2:0:8" \
-  --extract "r1=0:0:end" \
-  --extract "r2=3:0:end" \
-  --group "samples=metadata.tsv" \
-  --group "samples::match=i7+i5" \
-  --template "r1" \
-  --template "r2" \
-  --sample-from-group "samples" \
-  --out "demux/%sample.R%ordinal.fq"
+    --extract "i7=1:0:8" \
+    --extract "i5=2:0:8" \
+    --extract "r1=0:0:end" \
+    --extract "r2=3:0:end" \
+    --group "samples=metadata.tsv" \
+    --group "samples::match=i7+i5" \
+    --template "r1" \
+    --template "r2" \
+    --sample-from-group "samples" \
+    --out "demux/%sample.R%ordinal.fq"
+    
 ```
 
 ## chum
