@@ -10,12 +10,6 @@ I lead technical teams in biotech and write software for new genomics technologi
 </thead>
 <tbody>
 <tr>
-<td><a href="https://github.com/clintval/unmux">unmux</a></td>
-<td><a href="https://www.rust-lang.org/"><img alt="Language" src="https://img.shields.io/badge/language-rust-dea588.svg"></a></td>
-<td><a href="http://bioconda.github.io/recipes/unmux/README.html"><img alt="Install with bioconda" src="https://img.shields.io/badge/Install%20with-bioconda-brightgreen.svg"></a></td>
-<td>Parse and demultiplex records, splitcode-style.</td>
-</tr>
-<tr>
 <td><a href="https://github.com/clintval/chum">chum</a></td>
 <td><a href="https://www.rust-lang.org/"><img alt="Language" src="https://img.shields.io/badge/language-rust-dea588.svg"></a></td>
 <td><a href="http://bioconda.github.io/recipes/chum/README.html"><img alt="Install with bioconda" src="https://img.shields.io/badge/Install%20with-bioconda-brightgreen.svg"></a></td>
@@ -26,6 +20,12 @@ I lead technical teams in biotech and write software for new genomics technologi
 <td><a href="https://www.rust-lang.org/"><img alt="Language" src="https://img.shields.io/badge/language-rust-dea588.svg"></a></td>
 <td><a href="http://bioconda.github.io/recipes/krak/README.html"><img alt="Install with bioconda" src="https://img.shields.io/badge/Install%20with-bioconda-brightgreen.svg"></a></td>
 <td>An addicting set of Kraken-enhancing tools.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/clintval/unmux">unmux</a></td>
+<td><a href="https://www.rust-lang.org/"><img alt="Language" src="https://img.shields.io/badge/language-rust-dea588.svg"></a></td>
+<td><a href="http://bioconda.github.io/recipes/unmux/README.html"><img alt="Install with bioconda" src="https://img.shields.io/badge/Install%20with-bioconda-brightgreen.svg"></a></td>
+<td>Parse and demultiplex records, splitcode-style.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/clintval/vartovcf">vartovcf</a></td>
@@ -46,6 +46,18 @@ I lead technical teams in biotech and write software for new genomics technologi
 <td>An HTS-specs compliant BED toolkit.</td>
 </tr>
 <tr>
+<td><a href="https://github.com/clintval/cellme">cellme</a></td>
+<td><a href="https://www.python.org/"><img alt="Language" src="https://img.shields.io/badge/language-python-blue.svg"></a></td>
+<td><a href="https://badge.fury.io/py/cellme"><img alt="PyPi Release" src="https://badge.fury.io/py/cellme.svg"></a></td>
+<td>Convert a human cell line identifier into a truth-track VCF of its known mutations.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/clintval/pybgzf">pybgzf</a></td>
+<td><a href="https://www.python.org/"><img alt="Language" src="https://img.shields.io/badge/language-python-blue.svg"></a></td>
+<td><a href="https://badge.fury.io/py/pybgzf"><img alt="PyPi Release" src="https://badge.fury.io/py/pybgzf.svg"></a></td>
+<td>Streaming BGZF compression with on-the-fly tabix and CSI indexing.</td>
+</tr>
+<tr>
 <td><a href="https://github.com/clintval/typeline">typeline</a></td>
 <td><a href="https://www.python.org/"><img alt="Language" src="https://img.shields.io/badge/language-python-blue.svg"></a></td>
 <td><a href="https://badge.fury.io/py/typeline"><img alt="PyPi Release" src="https://badge.fury.io/py/typeline.svg"></a></td>
@@ -53,25 +65,6 @@ I lead technical teams in biotech and write software for new genomics technologi
 </tr>
 </tbody>
 </table>
-
-## unmux
-
-Demultiplex a dual-index paired-end run against a sample sheet, routing each read pair by its i7+i5 barcode concatenation:
-
-```bash
-❯ unmux "R1.fastq.gz" "I1.fastq.gz" "I2.fastq.gz" "R2.fastq.gz" \
-    --extract "i7=1:0:8" \
-    --extract "i5=2:0:8" \
-    --extract "r1=0:0:end" \
-    --extract "r2=3:0:end" \
-    --group "samples=metadata.tsv" \
-    --group "samples::match=i7+i5" \
-    --template "r1" \
-    --template "r2" \
-    --sample-from-group "samples" \
-    --out "demux/%sample.R%ordinal.fq"
-    
-```
 
 ## chum
 
@@ -97,6 +90,25 @@ Bridge Kraken classifications into a BAM and filter by taxon:
   | krak filter -t 9606 -o output.bam
 ```
 
+## unmux
+
+Demultiplex a dual-index paired-end run against a sample sheet, routing each read pair by its i7+i5 barcode concatenation:
+
+```bash
+❯ unmux "R1.fastq.gz" "I1.fastq.gz" "I2.fastq.gz" "R2.fastq.gz" \
+    --extract "i7=1:0:8" \
+    --extract "i5=2:0:8" \
+    --extract "r1=0:0:end" \
+    --extract "r2=3:0:end" \
+    --group "samples=metadata.tsv" \
+    --group "samples::match=i7+i5" \
+    --template "r1" \
+    --template "r2" \
+    --sample-from-group "samples" \
+    --out "demux/%sample.R%ordinal.fq"
+    
+```
+
 ## neodisambiguate
 
 Disambiguate templates aligned to human and mouse references:
@@ -106,6 +118,34 @@ Disambiguate templates aligned to human and mouse references:
     --input dna00001.aligned-to-human.bam dna00001.aligned-to-mouse.bam \
     --output out/dna00001 \
     --names hg38 mm10
+```
+
+## cellme
+
+Write an hg38 truth track of the known mutations in the MOLT-4 cell line:
+
+```bash
+❯ cellme "MOLT-4" \
+    --build hg38 \
+    --reference hg38.fa \
+    --output MOLT-4.hg38.vcf.gz
+```
+
+## pybgzf
+
+Write BED lines as BGZF, indexed as they are written, then query a region:
+
+```python
+import pybgzf
+from pybgzf import Columns, IndexFormat
+
+with pybgzf.writer("features.bed.gz", index=IndexFormat.TBI, columns=Columns.BED) as handle:
+    handle.write("chr1\t100\t200\tgene-a\n")
+    handle.write("chr1\t150\t300\tgene-b\n")
+
+with pybgzf.IndexedReader("features.bed.gz") as reader:
+    for line in reader.query("chr1", 180, 190):
+        print(line)
 ```
 
 ### Elsewhere
