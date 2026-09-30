@@ -42,25 +42,25 @@ I lead technical teams in biotech and write software for new genomics technologi
 <tr>
 <td><a href="https://github.com/clintval/bedspec">bedspec</a></td>
 <td><a href="https://www.python.org/"><img alt="Language" src="https://img.shields.io/badge/language-python-blue.svg"></a></td>
-<td><a href="https://badge.fury.io/py/bedspec"><img alt="PyPi Release" src="https://badge.fury.io/py/bedspec.svg"></a></td>
+<td><a href="https://pypi.org/project/bedspec/"><img alt="PyPI Release" src="https://img.shields.io/pypi/v/bedspec.svg?label=pypi%20package"></a></td>
 <td nowrap>An HTS-specs compliant BED toolkit.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/clintval/cellme">cellme</a></td>
 <td><a href="https://www.python.org/"><img alt="Language" src="https://img.shields.io/badge/language-python-blue.svg"></a></td>
-<td><a href="https://badge.fury.io/py/cellme"><img alt="PyPi Release" src="https://badge.fury.io/py/cellme.svg"></a></td>
+<td><a href="https://pypi.org/project/cellme/"><img alt="PyPI Release" src="https://img.shields.io/pypi/v/cellme.svg?label=pypi%20package"></a></td>
 <td nowrap>Make a truth-track VCF of a cell line's known mutations.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/clintval/pybgzf">pybgzf</a></td>
 <td><a href="https://www.python.org/"><img alt="Language" src="https://img.shields.io/badge/language-python-blue.svg"></a></td>
-<td><a href="https://badge.fury.io/py/pybgzf"><img alt="PyPi Release" src="https://badge.fury.io/py/pybgzf.svg"></a></td>
+<td><a href="https://pypi.org/project/pybgzf/"><img alt="PyPI Release" src="https://img.shields.io/pypi/v/pybgzf.svg?label=pypi%20package"></a></td>
 <td nowrap>Streaming BGZF with on-the-fly tabix and CSI indexing.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/clintval/typeline">typeline</a></td>
 <td><a href="https://www.python.org/"><img alt="Language" src="https://img.shields.io/badge/language-python-blue.svg"></a></td>
-<td><a href="https://badge.fury.io/py/typeline"><img alt="PyPi Release" src="https://badge.fury.io/py/typeline.svg"></a></td>
+<td><a href="https://pypi.org/project/typeline/"><img alt="PyPI Release" src="https://img.shields.io/pypi/v/typeline.svg?label=pypi%20package"></a></td>
 <td nowrap>Dataclasses to delimited text, round-trip with types.</td>
 </tr>
 </tbody>
