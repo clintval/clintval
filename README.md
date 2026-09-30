@@ -13,55 +13,55 @@ I lead technical teams in biotech and write software for new genomics technologi
 <td><a href="https://github.com/clintval/chum">chum</a></td>
 <td><a href="https://www.rust-lang.org/"><img alt="Language" src="https://img.shields.io/badge/language-rust-dea588.svg"></a></td>
 <td><a href="http://bioconda.github.io/recipes/chum/README.html"><img alt="Install with bioconda" src="https://img.shields.io/badge/Install%20with-bioconda-brightgreen.svg"></a></td>
-<td>Evaluate baits in a hybrid selection panel.</td>
+<td nowrap>Evaluate baits in a hybrid selection panel.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/clintval/krak">krak</a></td>
 <td><a href="https://www.rust-lang.org/"><img alt="Language" src="https://img.shields.io/badge/language-rust-dea588.svg"></a></td>
 <td><a href="http://bioconda.github.io/recipes/krak/README.html"><img alt="Install with bioconda" src="https://img.shields.io/badge/Install%20with-bioconda-brightgreen.svg"></a></td>
-<td>An addicting set of Kraken-enhancing tools.</td>
+<td nowrap>An addicting set of Kraken-enhancing tools.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/clintval/unmux">unmux</a></td>
 <td><a href="https://www.rust-lang.org/"><img alt="Language" src="https://img.shields.io/badge/language-rust-dea588.svg"></a></td>
 <td><a href="http://bioconda.github.io/recipes/unmux/README.html"><img alt="Install with bioconda" src="https://img.shields.io/badge/Install%20with-bioconda-brightgreen.svg"></a></td>
-<td>Parse and demultiplex records, splitcode-style.</td>
+<td nowrap>Parse and demultiplex records, splitcode-style.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/clintval/vartovcf">vartovcf</a></td>
 <td><a href="https://www.rust-lang.org/"><img alt="Language" src="https://img.shields.io/badge/language-rust-dea588.svg"></a></td>
 <td><a href="http://bioconda.github.io/recipes/vartovcf/README.html"><img alt="Install with bioconda" src="https://img.shields.io/badge/Install%20with-bioconda-brightgreen.svg"></a></td>
-<td>Stream VarDict variants into VCF v4.2.</td>
+<td nowrap>Stream VarDict variants into VCF v4.2.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/clintval/neodisambiguate">neodisambiguate</a></td>
 <td><a href="https://www.scala-lang.org/"><img alt="Language" src="https://img.shields.io/badge/language-scala-c22d40.svg"></a></td>
 <td><a href="http://bioconda.github.io/recipes/neodisambiguate/README.html"><img alt="Install with bioconda" src="https://img.shields.io/badge/Install%20with-bioconda-brightgreen.svg"></a></td>
-<td>Disambiguate reads mapped to multiple references.</td>
+<td nowrap>Disambiguate reads mapped to multiple references.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/clintval/bedspec">bedspec</a></td>
 <td><a href="https://www.python.org/"><img alt="Language" src="https://img.shields.io/badge/language-python-blue.svg"></a></td>
 <td><a href="https://badge.fury.io/py/bedspec"><img alt="PyPi Release" src="https://badge.fury.io/py/bedspec.svg"></a></td>
-<td>An HTS-specs compliant BED toolkit.</td>
+<td nowrap>An HTS-specs compliant BED toolkit.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/clintval/cellme">cellme</a></td>
 <td><a href="https://www.python.org/"><img alt="Language" src="https://img.shields.io/badge/language-python-blue.svg"></a></td>
 <td><a href="https://badge.fury.io/py/cellme"><img alt="PyPi Release" src="https://badge.fury.io/py/cellme.svg"></a></td>
-<td>Convert a human cell line identifier into a truth-track VCF of its known mutations.</td>
+<td nowrap>Make a truth-track VCF of a cell line's known mutations.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/clintval/pybgzf">pybgzf</a></td>
 <td><a href="https://www.python.org/"><img alt="Language" src="https://img.shields.io/badge/language-python-blue.svg"></a></td>
 <td><a href="https://badge.fury.io/py/pybgzf"><img alt="PyPi Release" src="https://badge.fury.io/py/pybgzf.svg"></a></td>
-<td>Streaming BGZF compression with on-the-fly tabix and CSI indexing.</td>
+<td nowrap>Streaming BGZF with on-the-fly tabix and CSI indexing.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/clintval/typeline">typeline</a></td>
 <td><a href="https://www.python.org/"><img alt="Language" src="https://img.shields.io/badge/language-python-blue.svg"></a></td>
 <td><a href="https://badge.fury.io/py/typeline"><img alt="PyPi Release" src="https://badge.fury.io/py/typeline.svg"></a></td>
-<td>Dataclasses to delimited text, round-trip with types.</td>
+<td nowrap>Dataclasses to delimited text, round-trip with types.</td>
 </tr>
 </tbody>
 </table>
