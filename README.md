@@ -40,6 +40,12 @@ I lead technical teams in biotech and write software for new genomics technologi
 <td>Disambiguate reads mapped to multiple references.</td>
 </tr>
 <tr>
+<td><a href="https://github.com/clintval/cellme">cellme</a></td>
+<td><a href="https://www.python.org/"><img alt="Language" src="https://img.shields.io/badge/language-python-blue.svg"></a></td>
+<td><a href="https://badge.fury.io/py/cellme"><img alt="PyPi Release" src="https://badge.fury.io/py/cellme.svg"></a></td>
+<td>Convert a human cell line identifier into a truth-track VCF of its known mutations.</td>
+</tr>
+<tr>
 <td><a href="https://github.com/clintval/bedspec">bedspec</a></td>
 <td><a href="https://www.python.org/"><img alt="Language" src="https://img.shields.io/badge/language-python-blue.svg"></a></td>
 <td><a href="https://badge.fury.io/py/bedspec"><img alt="PyPi Release" src="https://badge.fury.io/py/bedspec.svg"></a></td>
@@ -50,6 +56,12 @@ I lead technical teams in biotech and write software for new genomics technologi
 <td><a href="https://www.python.org/"><img alt="Language" src="https://img.shields.io/badge/language-python-blue.svg"></a></td>
 <td><a href="https://badge.fury.io/py/typeline"><img alt="PyPi Release" src="https://badge.fury.io/py/typeline.svg"></a></td>
 <td>Dataclasses to delimited text, round-trip with types.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/clintval/pybgzf">pybgzf</a></td>
+<td><a href="https://www.python.org/"><img alt="Language" src="https://img.shields.io/badge/language-python-blue.svg"></a></td>
+<td><a href="https://badge.fury.io/py/pybgzf"><img alt="PyPi Release" src="https://badge.fury.io/py/pybgzf.svg"></a></td>
+<td>Streaming BGZF compression with on-the-fly tabix and CSI indexing.</td>
 </tr>
 </tbody>
 </table>
