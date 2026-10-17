@@ -34,6 +34,18 @@ I lead technical teams in biotech and write software for new genomics technologi
 <td>Stream VarDict variants into VCF v4.2.</td>
 </tr>
 <tr>
+<td><a href="https://github.com/clintval/streampile">streampile</a></td>
+<td><a href="https://www.rust-lang.org/"><img alt="Language" src="https://img.shields.io/badge/language-rust-dea588.svg"></a></td>
+<td><a href="https://pypi.org/project/streampile/"><img alt="PyPI Release" src="https://img.shields.io/pypi/v/streampile.svg?label=pypi%20package"></a></td>
+<td>Forward-only pileups of SAM, BAM, and CRAM.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/clintval/spillsort">spillsort</a></td>
+<td><a href="https://www.rust-lang.org/"><img alt="Language" src="https://img.shields.io/badge/language-rust-dea588.svg"></a></td>
+<td><a href="https://pypi.org/project/spillsort/"><img alt="PyPI Release" src="https://img.shields.io/pypi/v/spillsort.svg?label=pypi%20package"></a></td>
+<td>Sort more items than fit in memory.</td>
+</tr>
+<tr>
 <td><a href="https://github.com/clintval/neodisambiguate">neodisambiguate</a></td>
 <td><a href="https://www.scala-lang.org/"><img alt="Language" src="https://img.shields.io/badge/language-scala-c22d40.svg"></a></td>
 <td><a href="http://bioconda.github.io/recipes/neodisambiguate/README.html"><img alt="Install with bioconda" src="https://img.shields.io/badge/Install%20with-bioconda-brightgreen.svg"></a></td>
@@ -63,90 +75,14 @@ I lead technical teams in biotech and write software for new genomics technologi
 <td><a href="https://pypi.org/project/typeline/"><img alt="PyPI Release" src="https://img.shields.io/pypi/v/typeline.svg?label=pypi%20package"></a></td>
 <td>Dataclasses to delimited text, round-trip with types.</td>
 </tr>
+<tr>
+<td><a href="https://github.com/clintval/ebs-autoscale">ebs-autoscale</a></td>
+<td><a href="https://www.gnu.org/software/bash/"><img alt="Language" src="https://img.shields.io/badge/language-bash-4EAA25.svg"></a></td>
+<td><a href="https://github.com/clintval/ebs-autoscale/releases/latest"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/clintval/ebs-autoscale"></a></td>
+<td>Autoscaling EBS-backed scratch storage on AWS.</td>
+</tr>
 </tbody>
 </table>
-
-## chum
-
-Score capture baits against a reference:
-
-```bash
-❯ chum score \
-    --baits baits.fa \
-    --targets targets.bed \
-    --reference hg38.fa \
-    --per-bait per-bait.tsv
-```
-
-## krak
-
-Bridge Kraken classifications into a BAM and filter by taxon:
-
-```bash
-❯ krak annotate \
-      -i input.bam \
-      -d /kraken-db \
-      -a <(krak prep input.bam | kraken2 --db /kraken-db --output - -) \
-  | krak filter -t 9606 -o output.bam
-```
-
-## unmux
-
-Demultiplex a dual-index paired-end run against a sample sheet, routing each read pair by its i7+i5 barcode concatenation:
-
-```bash
-❯ unmux "R1.fastq.gz" "I1.fastq.gz" "I2.fastq.gz" "R2.fastq.gz" \
-    --extract "i7=1:0:8" \
-    --extract "i5=2:0:8" \
-    --extract "r1=0:0:end" \
-    --extract "r2=3:0:end" \
-    --group "samples=metadata.tsv" \
-    --group "samples::match=i7+i5" \
-    --template "r1" \
-    --template "r2" \
-    --sample-from-group "samples" \
-    --out "demux/%sample.R%ordinal.fq"
-    
-```
-
-## neodisambiguate
-
-Disambiguate templates aligned to human and mouse references:
-
-```bash
-❯ neodisambiguate \
-    --input dna00001.aligned-to-human.bam dna00001.aligned-to-mouse.bam \
-    --output out/dna00001 \
-    --names hg38 mm10
-```
-
-## cellme
-
-Write an hg38 truth track of the known mutations in the MOLT-4 cell line:
-
-```bash
-❯ cellme "MOLT-4" \
-    --build hg38 \
-    --reference hg38.fa \
-    --output MOLT-4.hg38.vcf.gz
-```
-
-## pybgzf
-
-Write BED lines as BGZF, indexed as they are written, then query a region:
-
-```python
-import pybgzf
-from pybgzf import Columns, IndexFormat
-
-with pybgzf.writer("features.bed.gz", index=IndexFormat.TBI, columns=Columns.BED) as handle:
-    handle.write("chr1\t100\t200\tgene-a\n")
-    handle.write("chr1\t150\t300\tgene-b\n")
-
-with pybgzf.IndexedReader("features.bed.gz") as reader:
-    for line in reader.query("chr1", 180, 190):
-        print(line)
-```
 
 ### Elsewhere
 
