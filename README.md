@@ -58,6 +58,12 @@ I lead technical teams in biotech and write software for new genomics technologi
 <td>An HTS-specs compliant BED toolkit.</td>
 </tr>
 <tr>
+<td><a href="https://github.com/clintval/captainslog">captainslog</a></td>
+<td><a href="https://www.python.org/"><img alt="Language" src="https://img.shields.io/badge/language-python-blue.svg"></a></td>
+<td><a href="https://pypi.org/project/captainslog-ngs/"><img alt="PyPI Release" src="https://img.shields.io/pypi/v/captainslog-ngs.svg?label=pypi%20package"></a></td>
+<td>Typed dataclasses for Riker and Picard metrics.</td>
+</tr>
+<tr>
 <td><a href="https://github.com/clintval/cellme">cellme</a></td>
 <td><a href="https://www.python.org/"><img alt="Language" src="https://img.shields.io/badge/language-python-blue.svg"></a></td>
 <td><a href="https://pypi.org/project/cellme/"><img alt="PyPI Release" src="https://img.shields.io/pypi/v/cellme.svg?label=pypi%20package"></a></td>
