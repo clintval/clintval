@@ -10,6 +10,12 @@ I lead technical teams in biotech and write software for new genomics technologi
 </thead>
 <tbody>
 <tr>
+<td><a href="https://github.com/clintval/bamby">bamby</a></td>
+<td><a href="https://www.rust-lang.org/"><img alt="Language" src="https://img.shields.io/badge/language-rust-dea588.svg"></a></td>
+<td><a href="http://bioconda.github.io/recipes/bamby/README.html"><img alt="Install with bioconda" src="https://img.shields.io/badge/Install%20with-bioconda-brightgreen.svg"></a></td>
+<td>Group BAM records into read groups by the value of a tag.</td>
+</tr>
+<tr>
 <td><a href="https://github.com/clintval/chum">chum</a></td>
 <td><a href="https://www.rust-lang.org/"><img alt="Language" src="https://img.shields.io/badge/language-rust-dea588.svg"></a></td>
 <td><a href="http://bioconda.github.io/recipes/chum/README.html"><img alt="Install with bioconda" src="https://img.shields.io/badge/Install%20with-bioconda-brightgreen.svg"></a></td>
