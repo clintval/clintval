@@ -96,7 +96,7 @@ I lead technical teams in biotech and write software for new genomics technologi
 <tr>
 <td><a href="https://github.com/clintval/ebs-autoscale">ebs-autoscale</a></td>
 <td><a href="https://www.gnu.org/software/bash/"><img alt="Language" src="https://img.shields.io/badge/language-bash-4EAA25.svg"></a></td>
-<td><a href="https://github.com/clintval/ebs-autoscale/releases/latest"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/clintval/ebs-autoscale"></a></td>
+<td><a href="https://github.com/clintval/ebs-autoscale/releases/latest"><img alt="GitHub Release" src="https://badgen.net/github/release/clintval/ebs-autoscale"></a></td>
 <td>Autoscaling EBS-backed scratch storage on AWS.</td>
 </tr>
 </tbody>
