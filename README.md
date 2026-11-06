@@ -43,7 +43,7 @@ I lead technical teams in biotech and write software for new genomics technologi
 <td><a href="https://github.com/clintval/annatar">annatar</a></td>
 <td><a href="https://www.rust-lang.org/"><img alt="Language" src="https://img.shields.io/badge/language-rust-dea588.svg"></a></td>
 <td><a href="https://pypi.org/project/annatar/"><img alt="PyPI Release" src="https://img.shields.io/pypi/v/annatar.svg?label=pypi%20package"></a></td>
-<td>Convert a multi-sample VCF of single cells to an AnnData h5ad.</td>
+<td>Convert a VCF of single cells to an AnnData h5ad.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/clintval/streampile">streampile</a></td>
