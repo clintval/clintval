@@ -16,6 +16,12 @@ I lead technical teams in biotech and write software for new genomics technologi
 <td>Group BAM records into read groups by the value of a tag.</td>
 </tr>
 <tr>
+<td><a href="https://github.com/clintval/chaff">chaff</a></td>
+<td><a href="https://www.rust-lang.org/"><img alt="Language" src="https://img.shields.io/badge/language-rust-dea588.svg"></a></td>
+<td><a href="http://bioconda.github.io/recipes/chaff/README.html"><img alt="Install with bioconda" src="https://img.shields.io/badge/Install%20with-bioconda-brightgreen.svg"></a></td>
+<td>Flag somatic calls that are library-prep artifacts.</td>
+</tr>
+<tr>
 <td><a href="https://github.com/clintval/chum">chum</a></td>
 <td><a href="https://www.rust-lang.org/"><img alt="Language" src="https://img.shields.io/badge/language-rust-dea588.svg"></a></td>
 <td><a href="http://bioconda.github.io/recipes/chum/README.html"><img alt="Install with bioconda" src="https://img.shields.io/badge/Install%20with-bioconda-brightgreen.svg"></a></td>
